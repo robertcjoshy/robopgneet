@@ -1,0 +1,88 @@
+/* --------------------
+   GLOBAL STYLES
+--------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d9d9d9;   /* light grey background */
+}
+
+/* Wrapper */
+.page-wrapper {
+  max-width: 1200px;          /* website width */
+  margin: 0 auto;             /* center align */
+  padding: 0 15px;            /* inner spacing */
+  background-color: #ffffff;  /* site background */
+  border: 2px solid red;      /* temporary for testing */
+}
+
+/* --------------------
+   HEADER STYLES
+--------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;               /* header height */
+  background-color: #003366;  /* navy blue background */
+  padding: 0 20px;
+  color: white;
+}
+
+/* Logo Text (replace with image later if needed) */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Navigation Menu */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;                  /* space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* --------------------
+   HAMBURGER TOGGLE
+--------------------- */
+.menu-toggle {
+  display: none;              /* desktop hidden */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* --------------------
+   RESPONSIVE STYLES
+--------------------- */
+@media (max-width: 768px) {
+
+  .main-nav ul {
+    display: none;            /* hide nav by default on mobile */
+    position: absolute;
+    top: 80px;                /* below header */
+    right: 0;
+    background-color: #003366;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .main-nav ul.open {
+    display: flex;            /* open menu when toggle is pressed */
+  }
+
+  .menu-toggle {
+    display: block;           /* show hamburger icon */
+  }
+}
