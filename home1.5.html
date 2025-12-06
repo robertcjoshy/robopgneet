@@ -33,7 +33,7 @@ body.menu-open {
   max-width: 1200px;
   min-height: 1000px;
   height: auto;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -358,12 +358,37 @@ body.menu-open {
   gap: 20px;
 }
 
+/* Left side text */
+.news-text {
+  flex: 1; /* allows text to take available space */
+}
+
+.bar-button {
+  display: flex;     
+  gap: 10px;  
+}
+
 /* Search bar styling */
 .search-bar {
   width: 250px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #005bb5;
 }
 
 .news-left-second {
@@ -373,9 +398,36 @@ body.menu-open {
 
 .tags-right-second {
   padding: 10px;
-  background-color: #ccc;
   height: 200px;
+  width: 309px;
+}
+.tags {
+ display: flex;          /* arrange children in a row */
+  flex-wrap: wrap;        /* allow wrapping to next line */
+  gap: 10px;              /* spacing between tag boxes */
+  /*padding: 10px;*/
   width: 300px;
+  box-sizing: border-box;
+}
+
+.tag-item {
+  border: 1px solid #4387d5;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 20px;   /* pill-shaped tags */
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tag-item:hover {
+  background: #0073e6;
+  color: #fff;
+  border-color: #0073e6;
+  box-shadow: 0 2px 8px rgba(0,115,230,0.3);
 }
 
 /* Responsive behavior */
@@ -584,9 +636,6 @@ body.menu-open {
       <p>Your one-stop platform for NEET PG, FMGE, and DNB-PDCET updates, high-yield revision notes, quality discussion, and collaborative learning.
 At Pgneet.info, we offer:
 </p>
-      <h1>News & Updates</h1>
-      <p>Stay on top of official announcements, exam dates, application schedules, and result notifications.
-</p>
        <h1>High-Yield Revision Notes</h1>
       <p>Gain access to expertly curated notes focused on key topics and frequently tested concepts across all major subjects.
 </p>
@@ -603,16 +652,29 @@ At Pgneet.info, we offer:
       </div>
        <!-- First news row -->
   <div class="row-news-first" id="news-section">
-    <div>News</div>
+    <div class="news-text">
+      <h2>News & Updates</h2>
+    </div>
+    <div class="bar-button">
     <input type="text" class="search-bar" placeholder="Search..." />
+    <button class="search-button">S</button>
+    </div>
   </div>
 
   <!-- Second news row -->
   <div class="row-news-second">
     <div class="news-left-second">
-    <p>no news</p>
+    <p>no news..........................................</p>
     </div>
-    <div class="tags-right-second">popular tags</div>
+    <div class="tags-right-second">
+      <p>Trending Searches</p>
+      <div class="tags">
+        <div class="tag-item">examjdfhdufdsfdsfd</div>
+        <div class="tag-item">examfdfd</div>
+        <div class="tag-item">examfdfd</div>
+        <div class="tag-item">exam</div>
+      </div>
+    </div>
   </div>
   </main>
 
@@ -660,7 +722,7 @@ At Pgneet.info, we offer:
 
     <!-- Copyright Bar -->
     <div class="footer-bottom">
-        <p>PGNEET INFO - Copyright 2025. All rights reserved.</p>
+        <p>Robert - Copyright 2025. All rights reserved.</p>
     </div>
   </footer>
   <!-- FOOTER END -->
